@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+    <title>Learn To Vue Js</title>
+
+
+    <style>
+        .box{
+            padding: 100px 0;
+            width: 400px;
+            text-align: center;
+            background: #ddd;
+            margin: 20px;
+            display:inline-block ;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Hello, Vue :)</h1>
+
+
+    <div id="app">
+        <div v-if="showBooks">
+        <p>{{title}} / {{author}} / {{age}}</p>
+        </div>
+
+
+        <button @click="toggleShowBooks">
+            <span v-if="showBooks">Hide Books</span>
+            <span v-else>Show Books</span><!-- v-if 'de !showBooks da kuallanabiliriz.-->
+        </button>
+    <!--- 
+            <button v-on:click="age++">Age Arrttırıcı</button>
+            <button v-on:click="age--">Age Azaltıcı</button>
+            <div @click="changeTitle">Kitap Adını Değiştir</div>
+            <div @click="changeTitleTwo('Harry Potter')">Kitap Adını Değiştir 2. yöntem</div> 
+            <div v-show="showBooks">Currently Showing Books</div>v-show toggle görevi görmekte
+            
+    -->
+    <br>
+    <!--Mouse Events-->
+    <div class="box" @mouseover="memos">mouseover (enter)</div> <!--mouse üzerine gelince-->
+    <div class="box">mouseleave</div> <!--mouse üzerinden ayrılınca-->
+    <div class="box">double click</div><!--mouse çift tıklayınca-->
+    <div class="box"></div><!---->
+
+
+</div>
+    <script src="app.js"></script>
+</body>
+</html>
