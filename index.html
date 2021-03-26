@@ -44,9 +44,9 @@
     <br>
     <!--Mouse Events-->
     <div class="box" @mouseover="memos">mouseover (enter)</div> <!--mouse üzerine gelince-->
-    <div class="box">mouseleave</div> <!--mouse üzerinden ayrılınca-->
-    <div class="box">double click</div><!--mouse çift tıklayınca-->
-    <div class="box"></div><!---->
+    <div class="box" @mouseleave="memos">mouseleave</div> <!--mouse üzerinden ayrılınca-->
+    <div class="box" @dblclick="memos">double click</div><!--mouse çift tıklayınca-->
+    <div class="box" @mousemove="handleMouseMove">position - {{x}} {{y}}</div><!--mouse x ve y kordinatlarını verir-->
 
 
 </div>

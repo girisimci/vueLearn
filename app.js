@@ -5,8 +5,10 @@ const app = Vue.createApp({//vue başlangıc fonksiyonu
             showBooks:true,//true yaparsam görünür.
             title:'The Final Empire', //title isimli veri
             author: 'Brandon Sanderson',
-            age: 45
-        
+            age: 45,
+            x:0,
+            y:0
+            
         
         }
     },
@@ -23,7 +25,12 @@ const app = Vue.createApp({//vue başlangıc fonksiyonu
         memos(e){
             const mem = document.querySelector(".box");
             mem.style.backgroundColor="red";
-            console.log(e)
+            console.log(e, e.type);//e.type eventin tipini gösterir.
+        },
+
+        handleMouseMove(e){//mouse üzerine gidince kordinatları alıyor.
+            this.x=e.offsetX;//x kordinatı 
+            this.y=e.offsetY;//y kordinatı
         }
 
 
