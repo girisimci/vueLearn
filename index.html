@@ -16,6 +16,10 @@
             margin: 20px;
             display:inline-block ;
         }
+        h5{
+            margin-top: 0;
+            color:grey;  
+        }
     </style>
 
 </head>
@@ -25,7 +29,12 @@
 
     <div id="app">
         <div v-if="showBooks">
-        <p>{{title}} / {{author}} / {{age}}</p>
+        <ul>
+            <li v-for="book in books">
+                <h3>{{book.title}}</h3>
+                <h5>{{book.author}}</h5>
+            </li>
+        </ul>
         </div>
 
 
@@ -33,21 +42,23 @@
             <span v-if="showBooks">Hide Books</span>
             <span v-else>Show Books</span><!-- v-if 'de !showBooks da kuallanabiliriz.-->
         </button>
-    <!--- 
-            <button v-on:click="age++">Age Arrttırıcı</button>
+  
+  
+  
+  
+            <!--- <button v-on:click="age++">Age Arrttırıcı</button>
             <button v-on:click="age--">Age Azaltıcı</button>
             <div @click="changeTitle">Kitap Adını Değiştir</div>
             <div @click="changeTitleTwo('Harry Potter')">Kitap Adını Değiştir 2. yöntem</div> 
-            <div v-show="showBooks">Currently Showing Books</div>v-show toggle görevi görmekte
-            
-    -->
+            <div v-show="showBooks">Currently Showing Books</div>v-show toggle görevi görmekte -->
     <br>
-    <!--Mouse Events-->
-    <div class="box" @mouseover="memos">mouseover (enter)</div> <!--mouse üzerine gelince-->
-    <div class="box" @mouseleave="memos">mouseleave</div> <!--mouse üzerinden ayrılınca-->
-    <div class="box" @dblclick="memos">double click</div><!--mouse çift tıklayınca-->
-    <div class="box" @mousemove="handleMouseMove">position - {{x}} {{y}}</div><!--mouse x ve y kordinatlarını verir-->
 
+
+            <!--Mouse Events-->
+            <!-- <div class="box" @mouseover="memos">mouseover (enter)</div> mouse üzerine gelince
+            <div class="box" @mouseleave="memos">mouseleave</div> mouse üzerinden ayrılınca
+            <div class="box" @dblclick="memos">double click</div>mouse çift tıklayınca
+            <div class="box" @mousemove="handleMouseMove">position - {{x}} {{y}}</div>mouse x ve y kordinatlarını verir -->
 
 </div>
     <script src="app.js"></script>

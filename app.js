@@ -1,15 +1,19 @@
 const app = Vue.createApp({//vue başlangıc fonksiyonu
     data(){//veriler için data fonksiyonu
         return{
-            
+          
             showBooks:true,//true yaparsam görünür.
-            title:'The Final Empire', //title isimli veri
+            /*  title:'The Final Empire', //title isimli veri
             author: 'Brandon Sanderson',
             age: 45,
             x:0,
             y:0
-            
-        
+            */
+           books:[
+           {title:"Albert Einstein", author:"Ercan Gökyurt"},
+           {title:"Steve Jobs", author:"Ahmet Seyrek"},
+           {title:"Amok Koşucusu", author:"Stefan Zveıg"}
+        ]
         }
     },
     methods:{
