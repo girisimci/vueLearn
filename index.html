@@ -20,6 +20,10 @@
             margin-top: 0;
             color:grey;  
         }
+
+        img{
+            width:250px;
+        }
     </style>
 
 </head>
@@ -28,11 +32,15 @@
 
 
     <div id="app">
+
+        <!--Attribute binding-->
+        <a v-bind:href="url">Linke Git</a><!--v-bind silip :href olarak da kullanabilirdik.-->
         <div v-if="showBooks">
         <ul>
             <li v-for="book in books">
                 <h3>{{book.title}}</h3>
                 <h5>{{book.author}}</h5>
+                <img :src="book.img" alt="book.title">
             </li>
         </ul>
         </div>

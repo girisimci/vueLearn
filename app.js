@@ -1,7 +1,7 @@
 const app = Vue.createApp({//vue başlangıc fonksiyonu
     data(){//veriler için data fonksiyonu
         return{
-          
+            url:"https://v3.vuejs.org/",
             showBooks:true,//true yaparsam görünür.
             /*  title:'The Final Empire', //title isimli veri
             author: 'Brandon Sanderson',
@@ -10,9 +10,9 @@ const app = Vue.createApp({//vue başlangıc fonksiyonu
             y:0
             */
            books:[
-           {title:"Albert Einstein", author:"Ercan Gökyurt"},
-           {title:"Steve Jobs", author:"Ahmet Seyrek"},
-           {title:"Amok Koşucusu", author:"Stefan Zveıg"}
+           {title:"Albert Einstein", author:"Ercan Gökyurt", img:"vu.jpg"},
+           {title:"Steve Jobs", author:"Ahmet Seyrek", img:"vu.jpg"},
+           {title:"Amok Koşucusu", author:"Stefan Zveıg", img:"vu.jpg"}
         ]
         }
     },
